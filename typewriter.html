@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output::after{
+            content: "_|";
+        }
+    </style>
+    <script>
+        let str = "we are developers";
+        let len = str.length;
+        console.log(len);
+        let count = 0;//1//2
+        let store = '';//w//we
+        function run(){
+            setInterval(typewriter,100);
+            function typewriter(){
+                if(len>count){
+                store = store+str[count]//w+e//we+_
+                document.querySelector('#output').innerHTML = store;
+                count++
+                }
+                else{
+                    store='';
+                    count = 0;
+                }
+            }  
+        }       
+    </script>
+</head>
+<body onload="run()">
+    
+    <h1 id="output"></h1>    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"],
+        input[type="password"],
+        button{
+            width: 400px;
+            font-size: 20px;
+            margin: 20px 20px 0px 20px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <form>
+        <input type="text" onfocus="hidevalidation('nm')" id="name" placeholder="Enter your name"><br>
+        <div style="height: 15px;" id="error_name"></div>
+
+        <input type="text" id="email" onfocus="hidevalidation('em')" placeholder="Enter Your Email"><br>
+        <div style="height: 15px;" id="error_email"></div>
+
+        <input type="text" id="mobile" placeholder="Enter your Mobile"><br>
+        <input type="password" id="pass" placeholder="Enter your password"><br>
+        <input type="password" id="cpass" placeholder="Enter your confiorm password"><br>
+        <button id="reg" onclick="return show()"> Registration </button>
+    </form>
+    </center>
+    <script src="./formvalidation.js"></script>
+</body>
+</html>

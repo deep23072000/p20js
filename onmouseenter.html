@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 div img{
+             width: 100px;
+            border-radius: 8px;
+
+        }
+        .div1 div{
+            border: 1px solid grey;
+            margin: 20px;
+            border-radius: 8px;
+
+        }
+        .div1 div:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <section style="display: flex;">
+        <div class="div1">
+            <div>
+                <img id="img1"  src="https://m.media-amazon.com/images/I/71edjA10hZL._SX679_.jpg" alt="">
+            </div>
+            <div>
+                <img id="img2" src="https://m.media-amazon.com/images/I/71hmuVwzAPL._SX522_.jpg" alt="">
+            </div>
+            <div>
+                <img id="img3" src="https://m.media-amazon.com/images/I/81wdgBtzYHL._SX522_.jpg" alt="">
+            </div>
+            <div>
+                <img id="img4" src="https://m.media-amazon.com/images/I/81vu5uoTHWL._SX522_.jpg" alt="">
+            </div>
+            <div>
+                <img id="img5" src="https://m.media-amazon.com/images/I/A1gSsco8bfL._SX522_.jpg" alt="">
+            </div>
+        </div>
+        <div>
+            <div>
+                <img width="600px" id="changeimg" src="https://m.media-amazon.com/images/I/71edjA10hZL._SX679_.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let img1 = document.querySelector('#img1');
+        img1.addEventListener('mouseenter',changeimg1)//changeimg1 is callback
+        function changeimg1(){
+           document.querySelector('#changeimg').src = "https://m.media-amazon.com/images/I/71edjA10hZL._SX679_.jpg"; 
+           document.querySelector('img1').style.cursor = "pointer";
+        }
+
+        let img2 = document.querySelector('#img2');
+        img2.addEventListener('mouseenter',changeimg2)
+        function changeimg2(){
+            document.querySelector('#changeimg').src="https://m.media-amazon.com/images/I/71hmuVwzAPL._SX522_.jpg";
+        }
+        let img3 = document.querySelector('#img3');
+        img3.addEventListener('mouseenter',changeimg3)
+        function changeimg3(){
+            document.querySelector('#changeimg').src="https://m.media-amazon.com/images/I/81wdgBtzYHL._SX522_.jpg";
+        } 
+        
+        let img4 = document.querySelector('#img4');
+        img4.addEventListener('mouseenter',changeimg4)
+        function changeimg4(){
+            document.querySelector('#changeimg').src="https://m.media-amazon.com/images/I/81vu5uoTHWL._SX522_.jpg";
+        }
+        
+        let img5 = document.querySelector('#img5');
+        img5.addEventListener('mouseenter',changeimg5)
+        function changeimg5(){
+            document.querySelector('#changeimg').src="https://m.media-amazon.com/images/I/A1gSsco8bfL._SX522_.jpg";
+        }
+
+    </script>
+</body>
+</html>
